@@ -1,23 +1,67 @@
 ﻿define e = Character("Elliot")
 define m = Character("Mr.Robot")
 define w = Character("White Rose")
+
+image start = Movie(size=(1280, 720), play="videos/start.webm")
+image Move_the_barrel = Movie(size=(1280, 720), play="videos/Move The Barrel.mkv")
+image Enter_tunnel = Movie(size=(1280, 720), play="videos/Enter_Tunnel.mkv")
+image Read_note = Movie(size=(1280, 720), play="videos/Read_Note.mkv")
+image Move_on = Movie(size=(1280, 720), play="videos/Move_On.mkv")
+image Look = Movie(size=(1280, 720), play="videos/Look.mkv")
+image Get_On_The_Ship = Movie(size=(1280, 720), play="videos/Get_On_The_Ship.mkv")
+
 # The game starts here.
 
 label start:
+    scene start
+    pause 4.0
     "You`re trapped in a dungeon with your friend. You see a barrel. What do you do?"
+    
     menu:
         "Move the barrel":
             jump Move_the_barrel
         "Search the dungeon":
-            return
+            jump Search_the_dungeon_2
         "Sit down next to my friend":
-            return
+            jump Sit_down_next_to_my_friend_3
 
     return
+
+
+#seyam choice tree
+label Sit_down_next_to_my_friend_3:
+    "Friend hands you a note. But it's too dark to read in here. What do you do?"
+    menu:
+        "Move the barrel":
+            jump Move_the_barrel_3
+        "Search the dungeon":
+            jump Search_the_dungeon_2
+    return
+
+label Move_the_barrel_3:
+    "The barrel rolls aside and you find a secret tunnel. What do you do?"
+    menu:
+        "Enter tunnel":
+            jump Enter_tunnel
+    return
+
+#dwam choice tree
+label Search_the_dungeon_2:
+    "The dungeon is empty, but in your pocket you find a box with one match. What do you do?"
+    menu:
+        "Move the barrel":
+            jump Move_the_barrel_2
+        "Sit down next to my friend":
+            jump Sit_down_next_to_my_friend
+    return
+
 
 #first choice tree
 
 label Move_the_barrel:
+
+    scene Move_the_barrel
+
     "The barrel rolls aside and you find a secret tunnel. What do you do?"
     menu:
         "Enter tunnel":
@@ -39,6 +83,8 @@ label Move_the_barrel:
 
 #first choice from above Move_the_barrel
 label Enter_tunnel:
+    scene Enter_tunnel
+    pause 0.5
     "You start to escape but your friend is too weak to go with you. He hand you a note. What do you do?"
     menu:
         "Read note":
@@ -52,6 +98,8 @@ label Enter_tunnel:
 #first choice from above Enter_tunnel
 
 label Read_note:
+    scene Read_note
+    show black behind Read_note
     "It is too dark to read the note. What do you do?"
     menu:
         "Move on":
@@ -60,6 +108,8 @@ label Read_note:
 
 
 label Move_on:
+    scene Move_on
+    show black behind Move_on
     "You crawl through the tunnel and the tunnel leads to a beach. What do you do?"
     menu:
         "Look":
@@ -67,6 +117,7 @@ label Move_on:
     return
 
 label Look:
+    scene Look
     "In the water you see a ship. What do you do?"
     menu:
         "Get on the ship":
@@ -74,6 +125,7 @@ label Look:
     return
 
 label Get_on_the_ship: #ending
+    scene Get_On_The_Ship
     "You boarded a ship that is going to a new world, but was spotted by the crew. They approach with their weapons drawn."
     return
 
