@@ -9,6 +9,39 @@ image Read_note = Movie(size=(1280, 720), play="videos/Read_Note.mkv")
 image Move_on = Movie(size=(1280, 720), play="videos/Move_On.mkv")
 image Look = Movie(size=(1280, 720), play="videos/Look.mkv")
 image Get_On_The_Ship = Movie(size=(1280, 720), play="videos/Get_On_The_Ship.mkv")
+image Return_and_search_the_dungeon = Movie(size=(1280, 720), play="videos/Return_and_search_the_dungeon.mkv")
+image Enter_Tunnel_2 = Movie(size=(1280, 720), play="videos/Enter_Tunnel_2.mkv")
+image Read_Note_2 = Movie(size=(1280, 720), play="videos/Read_Note_2.mkv")
+image Light_A_Match_2 = Movie(size=(1280, 720), play="videos/Light_A_Match_2.mkv")
+image Leave_Crawl = Movie(size=(1280, 720), play="videos/Leave_Crawl.mkv")
+image Stay = Movie(size=(1280, 720), play="videos/Stay.mkv")
+image Scout_the_way_to_the_exit_2 = Movie(size=(1280, 720), play="videos/Scout_the_way_to_the_exit_2.mkv")
+image Look_2 = Movie(size=(1280, 720), play="videos/Look_2.mkv")
+image Get_on_the_ship_2 = Movie(size=(1280, 720), play="videos/Get_on_the_ship_2.mkv")
+image Jump_off_the_ship = Movie(size=(1280, 720), play="videos/Jump_off_the_ship.mkv")
+image Return_to_a_friend = Movie(size=(1280, 720), play="videos/Return_to_a_friend.mkv")
+image Stay_with_a_friend = Movie(size=(1280, 720), play="videos/Stay_with_a_friend.mkv")
+image Return_to_a_friend_2 = Movie(size=(1280, 720), play="videos/Return_to_a_friend_2.mkv")
+image Return_to_the_beach = Movie(size=(1280, 720), play="videos/Return_to_the_beach.mkv")
+image Put_the_barrel_back = Movie(size=(1280, 720), play="videos/Put_the_barrel_back.mkv")
+image Move_the_barrel_2 = Movie(size=(1280, 720), play="videos/Move_the_barrel_2.mkv")
+image Search_the_dungeon = Movie(size=(1280, 720), play="videos/Search_the_dungeon.mkv")
+image Sit_down_next_to_my_friend = Movie(size=(1280, 720), play="videos/Sit_down_next_to_my_friend.mkv")
+image Light_a_match = Movie(size=(1280, 720), play="videos/Light_a_match.mkv")
+image Scout_the_way_to_the_exit = Movie(size=(1280, 720), play="videos/Scout_the_way_to_the_exit.mkv")
+image Enter_tunnel_3 = Movie(size=(1280, 720), play="videos/Enter_tunnel_3.mkv")
+image Continue_scouting_the_path = Movie(size=(1280, 720), play="videos/Continue_scouting_the_path.mkv")
+image Sit_down_next_to_my_friend_2 = Movie(size=(1280, 720), play="videos/Sit_down_next_to_my_friend_2.mkv")
+image Search_the_dungeon_2 = Movie(size=(1280, 720), play="videos/Search_the_dungeon_2.mkv")
+image Sit_down_next_to_my_friend_3 = Movie(size=(1280, 720), play="videos/Sit_down_next_to_my_friend_3.mkv")
+image Move_the_barrel_3 = Movie(size=(1280, 720), play="videos/Move_the_barrel_3.mkv")
+image Enter_the_door = Movie(size=(1280, 720), play="videos/Enter_the_door.mkv")
+
+
+
+
+
+
 
 # The game starts here.
 
@@ -30,6 +63,8 @@ label start:
 
 #seyam choice tree
 label Sit_down_next_to_my_friend_3:
+    scene Sit_down_next_to_my_friend_3
+    show black behind Sit_down_next_to_my_friend_3
     "Friend hands you a note. But it's too dark to read in here. What do you do?"
     menu:
         "Move the barrel":
@@ -39,6 +74,7 @@ label Sit_down_next_to_my_friend_3:
     return
 
 label Move_the_barrel_3:
+    scene Move_the_barrel_3
     "The barrel rolls aside and you find a secret tunnel. What do you do?"
     menu:
         "Enter tunnel":
@@ -47,6 +83,7 @@ label Move_the_barrel_3:
 
 #dwam choice tree
 label Search_the_dungeon_2:
+    scene Search_the_dungeon_2
     "The dungeon is empty, but in your pocket you find a box with one match. What do you do?"
     menu:
         "Move the barrel":
@@ -73,6 +110,8 @@ label Move_the_barrel:
     return
 
     label Sit_down_next_to_my_friend_2:
+        scene Sit_down_next_to_my_friend_2
+        show black behind Sit_down_next_to_my_friend_2
         "Friend hands you a note. But it's too dark to read in here. What do you do?"
         menu:
             "Enter tunnel":
@@ -131,6 +170,7 @@ label Get_on_the_ship: #ending
 
 #second choice from Enter_tunnel
 label Return_and_search_the_dungeon:
+    scene Return_and_search_the_dungeon
     "The dungeon is empty, but in your pocket you find a box with one match. What do you do?"
     menu:
         "Enter tunnel":
@@ -140,6 +180,7 @@ label Return_and_search_the_dungeon:
     return 
 
 label Put_the_barrel_back:
+    scene Put_the_barrel_back
     "In silence you hear..."
     m "Is any of it real? I mean, look at this."
     m "Look at it!"
@@ -167,6 +208,7 @@ label Put_the_barrel_back:
 return
 
 label Move_the_barrel_2:
+    scene Move_the_barrel_2
     "The barrel rolls aside. You see a secret tunnel. What do you do?"
     menu:
         "Enter tunnel":
@@ -176,8 +218,8 @@ label Move_the_barrel_2:
 #second choice from above Move_the_barrel
 
 label Search_the_dungeon:
+    scene Search_the_dungeon
     "The dungeon is empty, but in your pocket you find a box with one match. What do you do?"
-
     menu:
         "Enter tunnel":
             jump Enter_tunnel_2
@@ -186,6 +228,8 @@ label Search_the_dungeon:
     return
 
 label Enter_tunnel_2:
+    scene Enter_Tunnel_2
+    
     "You start to escape but your friend is too weak to go with you. He hand you a note. What do you do?"
     menu:
         "Read Note":
@@ -193,6 +237,8 @@ label Enter_tunnel_2:
     return
 
 label Read_Note_2:
+    scene Read_Note_2
+    show black behind Read_Note_2
     "It is too dark to read the note. What do you do?"
     menu:
         "Move on":
@@ -202,6 +248,8 @@ label Read_Note_2:
     return
 
 label Light_a_match_2:
+    scene Light_A_Match_2
+    show black behind Light_A_Match_2
     "The note says, 'Don`t leave me here.' Do you leave your friend or stay?"
     menu:
         "Leave":
@@ -214,6 +262,8 @@ label Light_a_match_2:
 
 
 label Leave:
+    scene Leave_Crawl
+    show black behind Leave_Crawl
     "You crawl through the tunnel and the tunnel leads to a beach. What do you do?"
     menu:
         "Look":
@@ -221,6 +271,8 @@ label Leave:
     return
 
 label Stay:
+    scene Stay
+    pause 4.0
     "Here nothing can be considered 'real', all this is just ILLUSION. Illusion is dispelled. You see the eXit."
     menu:
         "Enter the door":
@@ -228,6 +280,8 @@ label Stay:
     return
 
 label Scout_the_way_to_the_exit_2:
+    scene Scout_the_way_to_the_exit_2
+    show black behind Scout_the_way_to_the_exit_2
     "You crawl through the tunnel and the tunnel leads to a beach. What do you do?"
     menu:
         "Look":
@@ -238,6 +292,8 @@ label Scout_the_way_to_the_exit_2:
 #second choice from Search_the_dungeon
 
 label Sit_down_next_to_my_friend:
+    scene Sit_down_next_to_my_friend
+    show black behind Sit_down_next_to_my_friend
     "Friend hands you a note. But it's too dark to read in here. What do you do?"
     menu:
         "Light a match":
@@ -246,6 +302,9 @@ label Sit_down_next_to_my_friend:
     return
 
 label Light_a_match:
+    
+    scene Light_a_match
+    show black behind Light_a_match
     "The note says, 'Don`t leave me here.' Do you leave your friend or stay?"
     menu:
         "Scout the way to the exit":
@@ -258,6 +317,7 @@ label Light_a_match:
 
 
 label Scout_the_way_to_the_exit:
+    scene Scout_the_way_to_the_exit
     "You see a secret tunnel. What do you do?"
     menu:
         "Enter tunnel":
@@ -267,6 +327,7 @@ label Scout_the_way_to_the_exit:
     return
 
 label Enter_tunnel_3:
+    scene Enter_tunnel_3
     "You start to escape but your friend is too weak to go with you. What do you do?"
     menu:
         "Continue scouting the path":
@@ -276,6 +337,8 @@ label Enter_tunnel_3:
     return
 
 label Continue_scouting_the_path:
+    scene Continue_scouting_the_path
+    show black behind Continue_scouting_the_path
     "You crawl through the tunnel and the tunnel leads to a beach. What do you do?"
     menu:
         "Look":
@@ -284,6 +347,7 @@ label Continue_scouting_the_path:
 
 
 label Look2:
+    scene Look_2
     "In the water you see a ship. What do you do?"
     menu:
         "Get on the ship":
@@ -293,6 +357,7 @@ label Look2:
     return
 
 label Return_to_a_friend_2:
+    scene Return_to_a_friend_2
     "Your friend is too weak to go with you. What do you do?"
     menu:
         "Return to the beach":
@@ -303,6 +368,7 @@ label Return_to_a_friend_2:
 
 
 label Return_to_the_beach:
+    scene Return_to_the_beach
     "In the water you see a ship. What do you do?"
     menu:
         "Get on the ship":
@@ -311,6 +377,7 @@ label Return_to_the_beach:
 
     
 label Get_on_the_ship_2:
+    scene Get_on_the_ship_2
     "You boarded a ship that is going to a new world, but was spotted by the crew. They approach with their weapons drawn."
     menu:
         "Jump off the ship":
@@ -319,6 +386,7 @@ label Get_on_the_ship_2:
 
 
 label Jump_off_the_ship:
+    scene Jump_off_the_ship
     "You swim to the beach and watch the ship sail away. What do you do?"
     menu: 
         "Return to a friend":
@@ -326,6 +394,7 @@ label Jump_off_the_ship:
     return
 
 label Return_to_a_friend:
+    scene Return_to_a_friend
     "Your friend is too weak to go with you. What do you do?"
     menu:
         "Stay with the friend":
@@ -334,6 +403,8 @@ label Return_to_a_friend:
 
 #ending'y dwam
 label Stay_with_a_friend:
+    scene Stay_with_a_friend
+    pause 4.0
     "ILLUSION is dispelled. You see the eXit. Consciousness opened the door. You can leave the current matrix in The Out and create a new world inside yourself."
     menu:
         "Enter the door":
@@ -341,6 +412,7 @@ label Stay_with_a_friend:
     return
 
 label Enter_the_door:
+    scene Enter_the_door
     w "I`ve always found doors fascinating inventions. They hold the entry to unlimited imagination. Before you open any door, a world filled with possibilities sits right behind it. And it isn`t until you open it, they are realized."
 
 return
