@@ -540,7 +540,7 @@ style return_button:
 ## example of how to make a custom screen.
 
 screen about():
-
+     
     tag menu
 
     ## This use statement includes the game_menu screen inside this one. The
@@ -558,8 +558,8 @@ screen about():
             ## gui.about is usually set in options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
-
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text "Made with ❤️ by {a=https://linktr.ee/youns115}Younis Sedqi Ibrahim{/a}\n"
+            text _("{a=https://www.renpy.org/}Ren'Py{/a} version: [renpy.version_only].\n\n[renpy.license!t]")
 
 
 style about_label is gui_label
