@@ -1,4 +1,4 @@
-# eXit
+# eXit: The Digital Escape
 eXit: The Digital Escape, A game based on Mr. Robot Season 4 Episode 11
 
 To download the game, please follow the link below:
