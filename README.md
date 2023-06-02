@@ -10,6 +10,6 @@ Click on the link to access the Google Drive folder where you can download the g
 After downloading the game files from the Google Drive link, follow the installation instructions based on your operating system:
 Windows
 
-    Extract the downloaded ZIP file to a location of your choice.
-    Navigate to the extracted folder.
-    Double-click on the eXit.exe file to launch the game.
+   1. Extract the downloaded ZIP file to a location of your choice.
+   2. Navigate to the extracted folder.
+   3. Double-click on the eXit.exe file to launch the game.
